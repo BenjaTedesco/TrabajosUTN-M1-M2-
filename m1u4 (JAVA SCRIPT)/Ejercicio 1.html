@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ej1</title>
+</head>
+
+<body>
+	<script>
+        const dist = parseInt(prompt('Ingrese la distancia en metros que desea viajar:', ''));
+
+		if (dist<=1000) {
+			document.write(`Te recomendamos viajar a pie los ${dist} metros`);
+		} else if (dist>1000 && dist<=10000) {
+			document.write(`Te recomendamos que viajes en bicicleta los ${dist} metros`);
+		} else if (dist>10000 && dist<=30000) {
+			document.write(`Te recomendamos que viajes en colectivo los ${dist} metros`);
+		} else if (dist>30000 && dist<=100000) {
+			document.write(`Te recomendamos que viajes en auto los ${dist} metros`);
+		} else if (dist>100000) {
+			document.write(`Te recomendamos que viajes en avion los ${dist} metros`);
+		}
+	</script>
+
+</body>
+</html>
