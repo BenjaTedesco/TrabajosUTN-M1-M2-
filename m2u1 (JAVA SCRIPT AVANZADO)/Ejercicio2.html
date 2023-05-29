@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Ejercicio2.css"
+    <title>Ejercicio 2</title>
+</head>
+<body>
+  <div>
+    <h1>Prueba de Textarea</h1>
+    <section id="character-counter-container">
+        <form>
+            <label>Mensajeria</label>
+            <textarea name="message" id="message" class="textarea" rows="10" placeholder="Escribe un mensaje.." maxlength="420"></textarea>
+            <div id="character-counter">
+                <span id="typed-characters">0</span>
+                <span>/</span>
+                <span id="maximum-characters">420</span>
+            </div>
+            <button class="button">Enviar mensaje</button>
+        </form>
+    </section>
+</div>
+  <script type="text/javascript">
+
+ const textAreaElement = document.querySelector("#message");
+const characterCounterElement = document.querySelector("#character-counter");
+const typedCharactersElement = document.querySelector("#typed-characters");
+const maximumCharacters = 420;
+textAreaElement.addEventListener("keydown", (event) => {
+    const typedCharacters = textAreaElement.value.length;
+    if (typedCharacters > maximumCharacters) {
+        return false;
+    }
+    typedCharactersElement.textContent = typedCharacters;
+    if (typedCharacters >= 200 && typedCharacters < 250) {
+        characterCounterElement.classList = "text-warning";
+    } else if (typedCharacters >= 250) {
+        characterCounterElement.classList = "text-danger";
+    }
+});
+
+  </script>
+</body>
+</html>
