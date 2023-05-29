@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cambiarcolor.css"
     <title>Ej1</title>
 </head>
 <body>
-    
+    <div class="cuadrado">
+        <input type="button" value="Verde" id="btn1" onclick="changeColorBtn1()">
+        <input type="button" value="Azul" id="btn2" onclick="changeColorBtn2()">
+        <input type="button" value="Rojo" id="btn3" onclick="changeColorBtn3()">
+        </div>
+    </div>
+    <script type="text/javascript">
+        function changeColorBtn1(){
+    document.body.style.backgroundColor= "green";
+        }
+        function changeColorBtn2(){
+    document.body.style.backgroundColor= "blue";
+        }
+        function changeColorBtn3(){
+    document.body.style.backgroundColor= "red";
+        }
+    </script>
 </body>
 </html>
